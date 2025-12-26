@@ -1,0 +1,69 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+<h2>Ajout d'un nouveau formateur :</h2>
+<form id="addForm" (ngSubmit)="addFormateur(f)" #f="ngForm">
+  <div class="mb-3">
+    <label for="nom" class="form-label">Nom*</label>
+    <input type="text" class="form-control" id="nom" name="nom" #nom="ngModel" ngModel required />
+    @if (nom.invalid && nom.touched) {
+      <span class="error">Ce champ est obligatoire!</span>
+    }
+  </div>
+  <div class="mb-3">
+    <label for="prenom" class="form-label">Prénom*</label>
+    <input type="text" class="form-control" id="prenom" name="prenom" #prenom="ngModel" ngModel required />
+    @if (prenom.invalid && prenom.touched) {
+      <span class="error">Ce champ est obligatoire!</span>
+    }
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email*</label>
+    <input type="email" class="form-control" id="email" name="email" #email="ngModel" ngModel required />
+    @if (email.invalid && email.touched) {
+      <span class="error">Ce champ est obligatoire!</span>
+    }
+  </div>
+  <div class="mb-3">
+    <label for="telephone" class="form-label">Téléphone*</label>
+    <input type="number" class="form-control" id="telephone" name="telephone" #telephone="ngModel" ngModel required />
+    @if (telephone.invalid && telephone.touched) {
+      <span class="error">Ce champ est obligatoire!</span>
+    }
+  </div>
+  <div class="mb-3">
+    <label for="numCIN" class="form-label">Numéro CIN*</label>
+    <input type="number" class="form-control" id="numCIN" name="numCIN" #numCIN="ngModel" ngModel required />
+    @if (numCIN.invalid && numCIN.touched) {
+      <span class="error">Ce champ est obligatoire!</span>
+    }
+  </div>
+  <div class="mb-3">
+    <label for="photo" class="form-label">Photo*</label>
+    <input type="file" class="form-control" id="photo" name="photo" #photo="ngModel" ngModel required />
+    @if (photo.invalid && photo.touched) {
+      <span class="error">Ce champ est obligatoire!</span>
+    }
+  </div>
+  <div class="mb-3">
+    <label for="cv" class="form-label">CV*</label>
+    <input type="file" class="form-control" id="cv" name="cv" #cv="ngModel" ngModel required />
+    @if (cv.invalid && cv.touched) {
+      <span class="error">Ce champ est obligatoire!</span>
+    }
+  </div>
+  <div class="mb-3">
+    <label for="specialites" class="form-label">Spécialités*</label>
+    <input type="text" class="form-control" id="specialites" name="specialites" #specialites="ngModel" ngModel required />
+    @if (specialites.invalid && specialites.touched) {
+      <span class="error">Ce champ est obligatoire!</span>
+    }
+  </div>
+  <button 
+    type="submit" 
+    id="btnValidAdd" 
+    class="btn btn-primary"
+    [disabled]="f.invalid">
+    Valider
+  </button>
+</form>
+</div>

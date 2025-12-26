@@ -1,0 +1,53 @@
+/* Améliorer l'apparence générale des cartes de sessions */
+.session-card {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.session-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajouter des marges autour des titres de section */
+h3.text-center.text-secondary {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+/* Style des icônes FontAwesome */
+.fas {
+    margin-right: 8px;
+}
+
+/* Améliorer le bouton d'inscription */
+.btn-success {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Ajouter une bordure légère aux boutons désactivés */
+.btn-secondary:disabled {
+    opacity: 0.7;
+    border: 1px solid #ddd;
+    cursor: not-allowed;
+}
+
+/* Style de l'icon et de la description dans la card */
+.card-text {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Ajout de marges internes à la description de la formation */
+.card-body p {
+    margin-bottom: 15px;
+}

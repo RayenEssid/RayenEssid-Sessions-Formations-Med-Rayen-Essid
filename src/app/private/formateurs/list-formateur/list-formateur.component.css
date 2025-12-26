@@ -1,0 +1,53 @@
+.niveau-debutant {
+    background-color: #e4ffe1; /* Vert clair */
+    color: #3c763d; /* Couleur du texte */
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+  
+  .niveau-intermediaire {
+    background-color: #fff3cd; /* Jaune clair */
+    color: #856404; /* Couleur du texte */
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+  
+  .niveau-avance {
+    background-color: #f8d7da; /* Rouge clair */
+    color: #721c24; /* Couleur du texte */
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+  /* Style pour le titre de la page */
+.page-title {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.page-title + .lead {
+  font-size: 1.1rem;
+}
+
+/* Bouton d'ajout stylisé */
+.btn-successs {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-successs:hover {
+  background-color: #28a745;
+  transform: translateY(-3px);
+}
+
+.btn-successs i {
+  margin-right: 10px;
+}
+
+
+

@@ -1,0 +1,100 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+  <h2>Ajout d'une nouvelle session :</h2>
+  <form id="addSessionForm" (ngSubmit)="addSession(f)" #f="ngForm">
+    <div class="mb-3">
+        <label for="formationId" class="form-label">ID de la Formation</label>
+        <input
+        type="text"
+        class="form-control"
+        id="formationId"
+        name="formationId"
+        [(ngModel)]="formationId"
+        readonly
+        />
+
+      </div>      
+
+    <div class="mb-3">
+      <label for="dateDeb" class="form-label">Date de début*</label>
+      <input
+        type="date"
+        class="form-control"
+        id="dateDeb"
+        name="dateDeb"
+        #dateDeb="ngModel"
+        ngModel
+        required
+      />
+      @if (dateDeb.invalid && dateDeb.touched) {
+      <span class="error">Ce champ est obligatoire!</span>
+      }
+    </div>
+
+    <div class="mb-3">
+      <label for="dateFin" class="form-label">Date de fin*</label>
+      <input
+        type="date"
+        class="form-control"
+        id="dateFin"
+        name="dateFin"
+        #dateFin="ngModel"
+        ngModel
+        required
+      />
+      @if (dateFin.invalid && dateFin.touched) {
+      <span class="error">Ce champ est obligatoire!</span>
+      }
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label">Description*</label>
+      <textarea
+        class="form-control"
+        id="description"
+        name="description"
+        #description="ngModel"
+        ngModel
+        required
+      ></textarea>
+      @if (description.invalid && description.touched) {
+      <span class="error">Ce champ est obligatoire!</span>
+      }
+    </div>
+
+    <div class="mb-3">
+      <label for="formateurs" class="form-label">Formateurs</label>
+      <input
+        type="text"
+        class="form-control"
+        id="formateurs"
+        name="formateurs"
+        placeholder="Entrez les IDs des formateurs séparés par des virgules"
+        #formateurs="ngModel"
+        ngModel
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="candidats" class="form-label">Candidats</label>
+      <input
+        type="text"
+        class="form-control"
+        id="candidats"
+        name="candidats"
+        placeholder="Entrez les IDs des candidats séparés par des virgules"
+        #candidats="ngModel"
+        ngModel
+      />
+    </div>
+
+    <button
+      type="submit"
+      id="btnValidAddSession"
+      class="btn btn-primary"
+      [disabled]="f.invalid"
+    >
+      Valider
+    </button>
+  </form>
+</div>

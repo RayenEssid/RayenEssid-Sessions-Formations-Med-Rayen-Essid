@@ -1,0 +1,40 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="container mt-4">
+    <div class="card shadow-lg">
+      <div class="card-body">
+        <h2 class="card-title text-center text-primary">{{ formation.titre }}</h2>
+        <p class="card-text mt-3">
+          <strong>Description : </strong> {{ formation.description }}
+        </p>
+        <p class="card-text"> 
+          <strong>Charge horaire : </strong> {{ formation.chargeHoraire }} heures
+        </p>
+      </div>
+    </div>
+    <div class="mt-4">
+      <h3>Sessions :</h3>
+      <button [routerLink]="['/admin-space/addsession', formation.id]" class="btn btn-success mb-3">Ajouter une session</button>
+
+      <ul class="list-group">
+        @for (session of sessions; track $index){
+        <li class="list-group-item">
+          Session n° {{$index + 1}} <br>
+          <strong>ID Formateurs : </strong> {{ session.formateurs.join(", ") }}
+          <br />
+          <strong>Date de début : </strong> {{ session.dateDeb | date:'dd/MM/yyyy' }}
+          <br />
+          <strong>Date de fin : </strong> {{ session.dateFin | date:'dd/MM/yyyy' }}
+          <br />
+          <strong>Description: </strong> {{ session.description }}
+          <br />
+          <strong>ID Candidats : </strong> {{ session.candidats.join(", ") }}
+          <br />
+          <a class="btn btn-primary" [routerLink]="['/admin-space/sessions', session.id]">Editer</a>
+          <button class="btn btn-danger" (click)="deleteSession(session.id)">Supprimer</button>
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+  

@@ -1,0 +1,55 @@
+<app-nav-bar></app-nav-bar>
+<div class="container mt-4">
+  <div class="row justify-content-between align-items-center">
+    <div class="col-md-8">
+      <h1 class="page-title text-primary font-weight-bold">Gestion des formations</h1>
+      <p class="lead text-muted">Liste de toutes les formations disponibles et leur gestion.</p>
+    </div>
+
+    <div class="col-md-4 text-md-right">
+      <button routerLink="/admin-space/addformation" class="btn btn-successs btn-lg btn-success">
+        <i class="fas fa-plus-circle"></i> Ajouter une formation
+      </button>
+    </div>
+  </div>
+</div>
+<table class="table table-striped">
+    <thead>
+      <tr class="table-dark">
+        <th scope="col">#</th>
+        <th scope="col">Titre</th>
+        <th scope="col">Description</th>
+        <th scope="col">Heures</th>
+        <th scope="col">Lien du programme</th>
+        <th scope="col">Niveau</th>
+        <th scope="col">Tags</th>
+        <th scope="col">Catégories</th>
+        <th scope="col">Editer</th>
+        <th scope="col">Supprimer</th>
+        <th scope="col">Sessions</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (formation of formations; track $index){
+      <tr>
+        <td scope="row">{{formation.id}}</td>
+        <td><strong>{{formation.titre}}</strong></td>
+        <td>{{formation.description}}</td>
+        <td>{{formation.chargeHoraire}}</td>
+        <td>{{formation.programme}}</td>
+        <td><span 
+          [ngClass]="{
+            'niveau-debutant': formation.niveau === 'débutant',
+            'niveau-intermediaire': formation.niveau === 'intermédiaire',
+            'niveau-avance': formation.niveau === 'avancé'
+          }">
+          {{formation.niveau}}
+        </span></td>
+        <td>{{formation.tags.join(", ")}}</td>
+        <td>{{formation.categories.join(", ")}}</td>
+        <td><a class="btn btn-primary" [routerLink]="['/admin-space/formations', 'edit', formation.id]">Editer</a></td>
+        <td><button class="btn btn-danger" (click)="deleteFormation(formation.id)">Supprimer</button></td>
+        <td><a class="btn btn-success" [routerLink]="[formation.id]">Modifier Sessions</a></td> 
+      </tr>
+      }
+    </tbody></table>

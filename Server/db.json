@@ -1,0 +1,386 @@
+{
+  "formations": [
+    {
+      "titre": "Formation Angular",
+      "description": "Apprenez à développer des applications avec Angularr",
+      "chargeHoraire": 20,
+      "programme": "https://example.com/programmes/angular.pdf",
+      "niveau": "débutant",
+      "tags": [
+        "angular",
+        "web development",
+        "frameworks"
+      ],
+      "categories": [
+        "Informatique",
+        "Développement_web"
+      ],
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "titre": "Formation React JS",
+      "description": "Apprenez à développer des applications avec React.js",
+      "chargeHoraire": 15,
+      "programme": "https://example.com/programmes/react.pdf",
+      "niveau": "intermédiaire",
+      "tags": [
+        "react",
+        "web development",
+        "framework"
+      ],
+      "categories": [
+        "Informatique",
+        "Développement_web"
+      ]
+    },
+    {
+      "id": "3",
+      "titre": "Formation en Conception de Bâtiments",
+      "description": "Découvrez les bases du génie civil pour concevoir et planifier des projets de construction.",
+      "chargeHoraire": 40,
+      "programme": "https://example.com/programmes/batiments.pdf",
+      "niveau": "avancé",
+      "tags": [
+        "génie civil",
+        "construction",
+        "architecture"
+      ],
+      "categories": [
+        "Génie Civil",
+        "Construction"
+      ]
+    },
+    {
+      "titre": "Formation en Sécurité des Réseaux",
+      "description": "Apprenez les principes fondamentaux pour sécuriser des réseaux informatiques.",
+      "chargeHoraire": 20,
+      "programme": "https://example.com/programmes/reseaux.pdf",
+      "niveau": "intermédiaire",
+      "tags": [
+        "réseaux",
+        "sécurité",
+        "informatiques"
+      ],
+      "categories": [
+        "Réseaux Informatiques",
+        "Sécurité"
+      ],
+      "id": "4"
+    },
+    {
+      "id": "5",
+      "titre": "Formation en Développement de Systèmes Embarqués",
+      "description": "Maîtrisez les compétences nécessaires pour concevoir et programmer des systèmes embarqués.",
+      "chargeHoraire": 35,
+      "programme": "https://example.com/programmes/embarques.pdf",
+      "niveau": "avancé",
+      "tags": [
+        "systèmes embarqués",
+        "programmation",
+        "électronique"
+      ],
+      "categories": [
+        "Systèmes Embarqués",
+        "Électronique"
+      ]
+    },
+    {
+      "titre": "Formation sur Ruby on Rails",
+      "description": "Découvrez les bases du framework backend Ruby on Rails",
+      "chargeHoraire": 50,
+      "programme": "https://example.com/programmes/ror.pdf",
+      "niveau": "débutant",
+      "tags": [
+        "Ruby",
+        "Ruby on Rails",
+        "framework",
+        "développement web"
+      ],
+      "categories": [
+        "Informatique",
+        "Développement_web"
+      ],
+      "id": "6"
+    },
+    {
+      "titre": "Formation sur Ruby on Rails 2",
+      "description": "aaaaaaaaaaaaaaaaaaaa",
+      "chargeHoraire": 20,
+      "programme": "https://example.com/programmes/RUBY.pdf",
+      "niveau": "avancé",
+      "tags": [
+        "Ruby",
+        "Ruby on Rails",
+        "framework",
+        "développement web"
+      ],
+      "categories": [
+        "Informatique",
+        "Développement_web"
+      ],
+      "id": "7"
+    }
+  ],
+  "formateurs": [
+    {
+      "nom": "Doeee",
+      "prenom": "John",
+      "email": "johndoe@example.com",
+      "telephone": 12345678,
+      "numCIN": 111111110,
+      "photo": "C:\\fakepath\\OIP.jfif",
+      "cv": "C:\\fakepath\\wp4239167.jpg",
+      "specialites": [
+        "Angular",
+        "React"
+      ],
+      "id": "F1"
+    },
+    {
+      "id": "F2",
+      "nom": "Smith",
+      "prenom": "Jane",
+      "email": "janesmith@example.com",
+      "telephone": 87654321,
+      "numCIN": 22222222,
+      "photo": "https://example.com/photos/janesmith.jpg",
+      "cv": "https://example.com/cvs/janesmith.pdf",
+      "specialites": [
+        "Mécanique",
+        "Électricité Industrielle"
+      ]
+    },
+    {
+      "id": "F3",
+      "nom": "Brown",
+      "prenom": "Charlie",
+      "email": "charliebrown@example.com",
+      "telephone": 12348765,
+      "numCIN": 33333333,
+      "photo": "https://example.com/photos/charliebrown.jpg",
+      "cv": "https://example.com/cvs/charliebrown.pdf",
+      "specialites": [
+        "Génie Civil",
+        "Systèmes Embarqués"
+      ]
+    },
+    {
+      "id": "30a9",
+      "nom": "Essid",
+      "prenom": "Med Rayen",
+      "email": "rayenessid15@gmail.com",
+      "telephone": 55803383,
+      "numCIN": 123456789,
+      "photo": "C:\\fakepath\\wp4239167.jpg",
+      "cv": "C:\\fakepath\\OIP.jfif",
+      "specialites": [
+        "Angular",
+        "React"
+      ]
+    },
+    {
+      "nom": "Steuber",
+      "prenom": "Jackie",
+      "email": "rayenessid15@gmail.com",
+      "telephone": 55803383,
+      "numCIN": 547624785,
+      "photo": "C:\\fakepath\\wp4239167.jpg",
+      "cv": "C:\\fakepath\\OIP.jfif",
+      "specialites": [
+        "Angular",
+        "React"
+      ],
+      "id": "9107"
+    }
+  ],
+  "candidats": [
+    {
+      "nom": "Dupont",
+      "prenom": "Jean",
+      "email": "jean.dupont@example.com",
+      "numCIN": 12345678,
+      "photo": "C:\\fakepath\\wp4239167.jpg",
+      "motDePasse": "motdepasse123",
+      "id": "C1"
+    },
+    {
+      "nom": "Martinn",
+      "prenom": "Clairr",
+      "email": "claire.martin@example.com",
+      "numCIN": 87654321,
+      "photo": "C:\\fakepath\\wp4239167.jpg",
+      "motDePasse": "motdepasse123",
+      "id": "C2"
+    },
+    {
+      "id": "C3",
+      "nom": "Durand",
+      "prenom": "Paul",
+      "email": "paul.durand@example.com",
+      "numCIN": 11223344,
+      "photo": "https://example.com/photos/paul.jpg",
+      "motDePasse": "motdepasse123"
+    },
+    {
+      "id": "C4",
+      "nom": "Petit",
+      "prenom": "Marie",
+      "email": "marie.petit@example.com",
+      "numCIN": 55667788,
+      "photo": "https://example.com/photos/marie.jpg",
+      "motDePasse": "motdepasse123"
+    },
+    {
+      "nom": "Lemoine",
+      "prenom": "Luc",
+      "email": "luc.lemoine@example.com",
+      "numCIN": 3344556,
+      "photo": "C:\\fakepath\\456280541_923529016486136_3834254744458072504_n.jpg",
+      "motDePasse": "motdepasse123",
+      "id": "C5"
+    },
+    {
+      "id": "C6",
+      "nom": "Moreau",
+      "prenom": "Sophie",
+      "email": "sophie.moreau@example.com",
+      "numCIN": 77889900,
+      "photo": "https://example.com/photos/sophie.jpg",
+      "motDePasse": "motdepasse123"
+    },
+    {
+      "id": "C7",
+      "nom": "Roux",
+      "prenom": "Hugo",
+      "email": "hugo.roux@example.com",
+      "numCIN": 99001122,
+      "photo": "https://example.com/photos/hugo.jpg",
+      "motDePasse": "motdepasse123"
+    },
+    {
+      "id": "C8",
+      "nom": "Blanc",
+      "prenom": "Camille",
+      "email": "camille.blanc@example.com",
+      "numCIN": 44556677,
+      "photo": "https://example.com/photos/camille.jpg",
+      "motDePasse": "motdepasse123"
+    },
+    {
+      "id": "d69e",
+      "nom": "Essid",
+      "prenom": "Med Rayen",
+      "email": "rayenessid15@gmail.com",
+      "numCIN": 123456789
+    },
+    {
+      "id": "dc9d",
+      "nom": "Essid",
+      "prenom": "Med Rayen",
+      "email": "rayenessid15@gmail.com",
+      "numCIN": 123456789
+    },
+    {
+      "id": "fdb4",
+      "nom": "Steuber",
+      "prenom": "Jackie",
+      "email": "claire.martin@example.com",
+      "numCIN": 99999999999999,
+      "photo": "C:\\fakepath\\OIP.jfif"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "S2",
+      "formationId": "2",
+      "formateurs": [
+        "F1",
+        "F2"
+      ],
+      "dateDeb": "2025-06-01",
+      "dateFin": "2025-06-05",
+      "description": "Session avancée pour maîtriser React.",
+      "candidats": [
+        "C3",
+        "C4"
+      ]
+    },
+    {
+      "formationId": 1,
+      "dateDeb": "2025-01-10",
+      "dateFin": "2024-11-20",
+      "description": "rfgRZGRZgergz....",
+      "formateurs": [
+        "F2"
+      ],
+      "candidats": [
+        "C7",
+        "C8",
+        "C9"
+      ],
+      "id": "S4"
+    },
+    {
+      "id": "S5",
+      "formationId": "5",
+      "formateurs": [
+        "F3"
+      ],
+      "dateDeb": "2025-02-01",
+      "dateFin": "2025-02-10",
+      "description": "Conception avancée de bâtiments.",
+      "candidats": [
+        "C9",
+        "7d3b",
+        "9a8c",
+        "b8ac"
+      ]
+    },
+    {
+      "formationId": "1",
+      "dateDeb": "2024-09-01",
+      "dateFin": "2024-09-05",
+      "description": "Session rapide sur Angular pour débutants....",
+      "formateurs": [
+        "F2"
+      ],
+      "candidats": [
+        "C4",
+        "C5"
+      ],
+      "id": "S7"
+    },
+    {
+      "id": "S8",
+      "formationId": "2",
+      "formateurs": [
+        "F1"
+      ],
+      "dateDeb": "2025-10-01",
+      "dateFin": "2025-10-07",
+      "description": "Session avancée sur React JS pour intermédiaires.",
+      "candidats": [
+        "C6",
+        "C7",
+        "dc9d"
+      ]
+    },
+    {
+      "id": "5c32",
+      "formationId": "5",
+      "formateurs": [
+        "F1",
+        "F3"
+      ],
+      "dateDeb": "2025-01-04",
+      "dateFin": "2025-01-11",
+      "description": "VVERQG",
+      "candidats": [
+        "C1",
+        "C3",
+        "C9"
+      ]
+    }
+  ]
+}

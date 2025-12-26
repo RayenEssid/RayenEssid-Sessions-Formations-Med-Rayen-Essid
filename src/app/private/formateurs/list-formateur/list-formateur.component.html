@@ -1,0 +1,50 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="container mt-4">
+  <div class="row justify-content-between align-items-center">
+    <div class="col-md-8">
+      <h1 class="page-title text-primary font-weight-bold">Gestion des formateurs</h1>
+      <p class="lead text-muted">Liste de tous les formateurs et leur gestion.</p>
+    </div>
+
+    <div class="col-md-4 text-md-right">
+      <button routerLink="add" class="btn btn-successs btn-lg btn-success">
+        <i class="fas fa-plus-circle"></i> Ajouter un formateur
+      </button>
+    </div>
+  </div>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr class="table-dark">
+      <th scope="col">#</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Prénom</th>
+      <th scope="col">Email</th>
+      <th scope="col">Téléphone</th>
+      <th scope="col">Numéro CIN</th>
+      <th scope="col">Photo</th>
+      <th scope="col">CV</th>
+      <th scope="col">Spécialités</th>
+      <th scope="col">Editer</th>
+      <th scope="col">Supprimer</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (formateur of formateurs; track $index) {
+      <tr>
+        <th scope="row">{{formateur.id}}</th>
+        <td>{{formateur.nom}}</td>
+        <td>{{formateur.prenom}}</td>
+        <td>{{formateur.email}}</td>
+        <td>{{formateur.telephone}}</td>
+        <td>{{formateur.numCIN}}</td>
+        <td><img [src]="formateur.photo" alt="Photo de {{formateur.nom}}" width="50"></td>
+        <td><a class="btn btn-success" [href]="formateur.cv" target="_blank">Voir</a></td>
+        <td>{{formateur.specialites.join(', ')}}</td>
+        <td><a class="btn btn-primary" [routerLink]="['/admin-space/formateurs', 'edit', formateur.id]">Editer</a></td>
+        <td><button class="btn btn-danger" (click)="deleteFormateur(formateur.id)">Supprimer</button></td>
+      </tr>
+    }
+  </tbody>
+</table>

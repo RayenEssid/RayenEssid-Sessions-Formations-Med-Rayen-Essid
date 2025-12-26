@@ -1,0 +1,105 @@
+/* Centrer le texte et ajouter un peu d'espace autour du contenu */
+.container {
+    max-width: 1200px;
+    padding-top: 20px;
+  }
+  /* Style de l'image dans la carte */
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover; /* Assure que l'image couvre bien l'espace de l'image sans déformer */
+    height: 200px; /* Ajuster la hauteur de l'image */
+  }
+  
+  /* Ajuster les cartes pour qu'elles soient plus belles */
+  .card {
+    border-radius: 10px;
+    overflow: hidden; /* Empêche que les éléments débordent de la carte */
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Titre principal */
+  .display-4 {
+    font-size: 2.5rem;
+    color: #007bff;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .text-muted {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  /* Introduction */
+  .text-center {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 500;
+    margin-top: 30px;
+  }
+  
+  /* Style pour les cartes de catégories */
+  .card {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .card-header {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .card-body {
+    background-color: #fff;
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style pour la liste des formations dans chaque catégorie */
+  ul {
+    padding-left: 20px;
+  }
+  
+  li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  /* Ajouter un peu d'espace entre les cartes */
+  .row {
+    margin-top: 20px;
+  }
+  
+  /* Responsive - sur les petits écrans, les cartes prendront toute la largeur */
+  @media (max-width: 767px) {
+    .col-md-4 {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Style des boutons si nécessaire */
+  .btn-custom {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  .btn-custom:hover {
+    background-color: #0056b3;
+    color: white;
+  }
+  

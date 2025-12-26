@@ -1,0 +1,46 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="container mt-3 mb-3">
+  <h1 class="display-4 text-primary text-center">Découvrez Nos Formations</h1>
+  <p class="lead text-muted text-center mb-2">Recherchez une formation en entrant des mots-clés pertinents pour trouver celle qui correspond à vos besoins.</p>
+  <app-search-module (recherche)="getSearch($event)"></app-search-module>
+
+  <div class="row">
+    <div *ngFor="let formation of filteredFormations(); let i = index" class="col-md-4 mb-4">
+      <div class="card">
+        <img src="https://picsum.photos/500/300?random={{ i }}" class="card-img-top" alt="Formation Image">
+
+        <div class="card-body">
+          <h5 class="card-title">{{formation.titre}}</h5>
+          <p class="card-text">{{formation.description}}</p>
+
+          <div class="d-flex justify-content-between">
+            <span 
+              [ngClass]="{
+                'badge': true,
+                'badge-primary': formation.niveau === 'débutant',
+                'badge-warning': formation.niveau === 'intermédiaire',
+                'badge-success': formation.niveau === 'avancé'
+              }">
+              {{formation.niveau}}
+            </span>
+
+            <span class="text-muted">{{formation.chargeHoraire}} heures</span>
+          </div>
+
+          <div class="mt-2">
+            <strong>Catégories :</strong>
+            <div>
+              {{ formation.categories.join(' - ') }}
+            </div>
+          </div>
+
+          <div class="mt-3">
+            <a class="btn btn-success" [href]="formation.programme" target="_blank">Voir le Programme</a>
+            <a class="btn btn-primary" [routerLink]="[formation.id]">Voir Détails</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

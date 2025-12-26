@@ -1,0 +1,45 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+    <h2>Modification d'un candidat :</h2>
+    <form id="editForm" (ngSubmit)="editCandidat(f)" #f="ngForm">
+      <div class="mb-3">
+        <label for="nom" class="form-label">Nom*</label>
+        <input type="text" class="form-control" id="nom" name="nom" [(ngModel)]="candidat!.nom" #nom="ngModel" required />
+        @if (nom.invalid && nom.touched) {
+          <span class="error">Ce champ est obligatoire!</span>
+        }
+      </div>
+      <div class="mb-3">
+        <label for="prenom" class="form-label">Prénom*</label>
+        <input type="text" class="form-control" id="prenom" name="prenom" [(ngModel)]="candidat!.prenom" #prenom="ngModel" required />
+        @if (prenom.invalid && prenom.touched) {
+          <span class="error">Ce champ est obligatoire!</span>
+        }
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email*</label>
+        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="candidat!.email" #email="ngModel" required />
+        @if (email.invalid && email.touched) {
+          <span class="error">Ce champ est obligatoire!</span>
+        }
+      </div>
+      <div class="mb-3">
+        <label for="numCIN" class="form-label">Numéro CIN*</label>
+        <input type="number" class="form-control" id="numCIN" name="numCIN" [(ngModel)]="candidat!.numCIN" #numCIN="ngModel" required />
+        @if (numCIN.invalid && numCIN.touched) {
+          <span class="error">Ce champ est obligatoire!</span>
+        }
+      </div>
+      <div class="mb-3">
+        <label for="photo" class="form-label">Photo*</label>
+        <input type="file" class="form-control" id="photo" name="photo" [(ngModel)]="candidat!.photo" #photo="ngModel" required />
+        @if (photo.invalid && photo.touched) {
+          <span class="error">Ce champ est obligatoire!</span>
+        }
+      </div>
+      <button type="submit" id="btnValidEdit" class="btn btn-primary" [disabled]="f.invalid">
+        Modifier
+      </button>
+    </form>
+  </div>
+  

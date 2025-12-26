@@ -1,0 +1,73 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+  <h2>Modification d'une formation :</h2>
+  <form id="editFormationForm" (ngSubmit)="editFormation(f)" #f="ngForm">
+    <div class="mb-3">
+      <label for="titre" class="form-label">Titre*</label>
+      <input type="text" class="form-control" id="titre" name="titre" [(ngModel)]="formation!.titre" #titre="ngModel" required />
+      @if (titre.invalid && titre.touched) {
+        <span class="error">Ce champ est obligatoire!</span>
+      }
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Description*</label>
+      <textarea class="form-control" id="description" name="description" [(ngModel)]="formation!.description" #description="ngModel" required></textarea>
+      @if (description.invalid && description.touched) {
+        <span class="error">Ce champ est obligatoire!</span>
+      }
+    </div>
+    <div class="mb-3">
+      <label for="chargeHoraire" class="form-label">Charge Horaire (en heures)*</label>
+      <input type="number" class="form-control" id="chargeHoraire" name="chargeHoraire" [(ngModel)]="formation!.chargeHoraire" #chargeHoraire="ngModel" required />
+      @if (chargeHoraire.invalid && chargeHoraire.touched) {
+        <span class="error">Ce champ est obligatoire!</span>
+      }
+    </div>
+    <div class="mb-3">
+      <label for="programme" class="form-label">Programme (lien PDF)*</label>
+      <input type="text" class="form-control" id="programme" name="programme" [(ngModel)]="formation!.programme" #programme="ngModel" required />
+      @if (programme.invalid && programme.touched) {
+        <span class="error">Ce champ est obligatoire!</span>
+      }
+    </div>
+    <div class="mb-3">
+      <label for="niveau" class="form-label">Niveau*</label>
+      <select class="form-select" id="niveau" name="niveau" [(ngModel)]="formation!.niveau" #niveau="ngModel" required>
+        <option value="débutant">Débutant</option>
+        <option value="intermédiaire">Intermédiaire</option>
+        <option value="avancé">Avancé</option>
+      </select>
+      @if (niveau.invalid && niveau.touched) {
+        <span class="error">Ce champ est obligatoire!</span>
+      }
+    </div>
+    <div class="mb-3">
+        <label for="tags" class="form-label">Tags</label>
+        <input
+          type="text"
+          class="form-control"
+          id="tags"
+          name="tags"
+          [value]="tagsString"
+          (input)="onTagsInput($event)"
+          placeholder="Entrez des tags séparés par des virgules"
+        />
+      </div>
+  
+      <div class="mb-3">
+        <label for="categories" class="form-label">Catégories</label>
+        <input
+          type="text"
+          class="form-control"
+          id="categories"
+          name="categories"
+          [value]="categoriesString"
+          (input)="onCategoriesInput($event)"
+          placeholder="Entrez des catégories séparées par des virgules"
+        />
+      </div>
+    <button type="submit" id="btnValidEditFormation" class="btn btn-primary" [disabled]="f.invalid">
+      Modifier
+    </button>
+  </form>
+</div>

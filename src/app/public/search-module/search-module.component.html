@@ -1,0 +1,12 @@
+<div class="input-group mb-3">
+  <input type="text" class="form-control form-control-lg rounded-pill border-info shadow-sm"
+    placeholder="Rechercher une formation..." 
+    (input)="ModifierSearchValue($event)" 
+    aria-label="Rechercher une formation"
+    aria-describedby="search-addon" />
+  <div class="input-group-append">
+    <button class="btn btn-info rounded-pill" type="button" id="search-addon">
+      <i class="fas fa-search"></i>
+    </button>
+  </div>
+</div>
