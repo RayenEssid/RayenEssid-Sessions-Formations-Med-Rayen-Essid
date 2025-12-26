@@ -6,6 +6,7 @@ import { Session } from '../Models/session';
 @Injectable({
   providedIn: 'root'
 })
+//backend
 export class SessionServiceService {
 
   constructor(private httpClient: HttpClient) { }

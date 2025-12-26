@@ -288,6 +288,13 @@
       "email": "claire.martin@example.com",
       "numCIN": 99999999999999,
       "photo": "C:\\fakepath\\OIP.jfif"
+    },
+    {
+      "id": "7fb5",
+      "nom": "adem",
+      "prenom": "Essid",
+      "email": "58304378",
+      "numCIN": 5555555
     }
   ],
   "sessions": [
@@ -347,7 +354,8 @@
       ],
       "candidats": [
         "C4",
-        "C5"
+        "C5",
+        "7fb5"
       ],
       "id": "S7"
     },
