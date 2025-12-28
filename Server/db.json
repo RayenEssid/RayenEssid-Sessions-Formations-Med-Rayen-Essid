@@ -2,10 +2,10 @@
   "formations": [
     {
       "titre": "Formation Angular",
-      "description": "Apprenez à développer des applications avec Angularr",
+      "description": "Apprenez à développer des applications avec Angular",
       "chargeHoraire": 20,
       "programme": "https://example.com/programmes/angular.pdf",
-      "niveau": "débutant",
+      "niveau": "intermédiaire",
       "tags": [
         "angular",
         "web development",
@@ -18,7 +18,6 @@
       "id": "1"
     },
     {
-      "id": "2",
       "titre": "Formation React JS",
       "description": "Apprenez à développer des applications avec React.js",
       "chargeHoraire": 15,
@@ -32,7 +31,8 @@
       "categories": [
         "Informatique",
         "Développement_web"
-      ]
+      ],
+      "id": "2"
     },
     {
       "id": "3",
@@ -105,7 +105,7 @@
     },
     {
       "titre": "Formation sur Ruby on Rails 2",
-      "description": "aaaaaaaaaaaaaaaaaaaa",
+      "description": "a",
       "chargeHoraire": 20,
       "programme": "https://example.com/programmes/RUBY.pdf",
       "niveau": "avancé",
@@ -120,6 +120,24 @@
         "Développement_web"
       ],
       "id": "7"
+    },
+    {
+      "id": "3",
+      "titre": "Formation en Structures Portantes et Béton Armé",
+      "description": "Approfondissez les principes de calcul et de conception des structures en béton armé pour des ouvrages durables et sûrs.",
+      "chargeHoraire": 50,
+      "programme": "https://example.com/programmes/structures-beton.pdf",
+      "niveau": "avancé",
+      "tags": [
+        "béton armé",
+        "structures",
+        "calcul de structures",
+        "ingénierie"
+      ],
+      "categories": [
+        "Génie Civil",
+        "Construction"
+      ]
     }
   ],
   "formateurs": [
@@ -129,7 +147,7 @@
       "email": "johndoe@example.com",
       "telephone": 12345678,
       "numCIN": 111111110,
-      "photo": "C:\\fakepath\\OIP.jfif",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9XetWWSOBHp05vsUcqQvGvwuz7KfAfFSplw&s",
       "cv": "C:\\fakepath\\wp4239167.jpg",
       "specialites": [
         "Angular",
@@ -138,18 +156,18 @@
       "id": "F1"
     },
     {
-      "id": "F2",
-      "nom": "Smith",
-      "prenom": "Jane",
-      "email": "janesmith@example.com",
+      "nom": "Ben Salem",
+      "prenom": "Assma",
+      "email": "Assma@example.com",
       "telephone": 87654321,
       "numCIN": 22222222,
-      "photo": "https://example.com/photos/janesmith.jpg",
-      "cv": "https://example.com/cvs/janesmith.pdf",
+      "photo": "C:\\fakepath\\OIP.jfif",
+      "cv": "C:\\fakepath\\wp4239167.jpg",
       "specialites": [
         "Mécanique",
         "Électricité Industrielle"
-      ]
+      ],
+      "id": "F2"
     },
     {
       "id": "F3",
@@ -158,7 +176,7 @@
       "email": "charliebrown@example.com",
       "telephone": 12348765,
       "numCIN": 33333333,
-      "photo": "https://example.com/photos/charliebrown.jpg",
+      "photo": "https://stelo-formation.fr/wp-content/uploads/2021/12/TP-Formateur-pro-adulte.jpg",
       "cv": "https://example.com/cvs/charliebrown.pdf",
       "specialites": [
         "Génie Civil",
@@ -172,7 +190,7 @@
       "email": "rayenessid15@gmail.com",
       "telephone": 55803383,
       "numCIN": 123456789,
-      "photo": "C:\\fakepath\\wp4239167.jpg",
+      "photo": "https://scontent.ftun9-1.fna.fbcdn.net/v/t39.30808-6/582700200_122180252942443745_6557691161310658513_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=r5CQMjn42D8Q7kNvwFVOJm-&_nc_oc=Adm3wEY1-YzGEy9PUO5EyJBrFVk2fU0UOIyqnhNKBBVOBWPBK15QRsMC9MlJVTvVqV8&_nc_zt=23&_nc_ht=scontent.ftun9-1.fna&_nc_gid=9d6INSzPNBbRtzGhHY5mZQ&oh=00_Afm2nAoBO7YeHWoNn-uQyQmZaH-REcDPZh86d7F4lWKVVw&oe=6955E21D",
       "cv": "C:\\fakepath\\OIP.jfif",
       "specialites": [
         "Angular",
@@ -199,7 +217,7 @@
       "nom": "Dupont",
       "prenom": "Jean",
       "email": "jean.dupont@example.com",
-      "numCIN": 12345678,
+      "numCIN": 123456789,
       "photo": "C:\\fakepath\\wp4239167.jpg",
       "motDePasse": "motdepasse123",
       "id": "C1"

@@ -30,7 +30,7 @@ export class EditCandidatComponent implements OnInit {
 
   editCandidat(f: NgForm): void {
     this.candidatService.editCandidat(this.candidat!).subscribe(
-      () => this.router.navigate(['/candidats'])
+      () => this.router.navigate(['/admin-space/candidats'])
     );
   }
 }
