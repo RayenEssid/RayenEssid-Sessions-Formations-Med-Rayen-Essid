@@ -13,7 +13,8 @@
     <div class="col-md-4 mb-4">
       <div class="card">
         <!-- Image de la catégorie -->
-        <img src="https://picsum.photos/500/300?random={{ $index }}" class="card-img-top" alt="Tech image {{ $index }}">
+        <img [src]="categoryImages[category]" class="card-img-top" alt="Image catégorie {{ category }}">
+
         <div class="card-header text-center">
           <h4>{{ category }}</h4>
         </div>

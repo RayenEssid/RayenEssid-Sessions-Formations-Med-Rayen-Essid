@@ -16,10 +16,8 @@ export class RechercheFormationComponent {
   getSearch(event: string){
     this.recherche = event;
   }
-   //  Filtre les formations selon la recherche
   filteredFormations() {
     return this.formations?.filter(formation =>
-       // Convertit les tags en string et cherche la recherche
       formation.tags.join(" ").toLowerCase().includes(this.recherche.toLowerCase())
     );
   }

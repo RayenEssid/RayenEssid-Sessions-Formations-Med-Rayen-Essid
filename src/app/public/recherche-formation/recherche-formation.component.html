@@ -3,7 +3,6 @@
 <div class="container mt-3 mb-3">
   <h1 class="display-4 text-primary text-center">Découvrez Nos Formations</h1>
   <p class="lead text-muted text-center mb-2">Recherchez une formation en entrant des mots-clés pertinents pour trouver celle qui correspond à vos besoins.</p>
-  <!-- COMPOSANT DE RECHERCHE (STANDALONE) -->
   <app-search-module (recherche)="getSearch($event)"></app-search-module>
 
   <div class="row">
@@ -37,8 +36,8 @@
           </div>
 
           <div class="mt-3">
-            <a class="btn btn-primary" [routerLink]="[formation.id]">Voir Détails</a>
             <a class="btn btn-success" [href]="formation.programme" target="_blank">Voir le Programme</a>
+            <a class="btn btn-primary" [routerLink]="[formation.id]">Voir Détails</a>
           </div>
         </div>
       </div>
