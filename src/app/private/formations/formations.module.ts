@@ -13,19 +13,22 @@ import { EditSessionComponent } from './edit-session/edit-session.component';
 
 
 @NgModule({
+  // declarations : Les composants CRÉÉS dans ce module
   declarations: [
-    DetailsFormationComponent,
-    RechercheFormationComponent,
-    AddFormationComponent,
-    EditFormationComponent,
-    AddSessionComponent,
-    EditSessionComponent
+    DetailsFormationComponent,     // Détails formation (admin)
+    RechercheFormationComponent,   // Recherche/liste (admin)
+    AddFormationComponent,         // Ajouter formation
+    EditFormationComponent,        // Modifier formation
+    AddSessionComponent,           // Ajouter session
+    EditSessionComponent           // Modifier session
   ],
+  
+  // imports : Ce que ce module UTILISE
   imports: [
-    CommonModule,
-    FormationsRoutingModule,
-    NavBarComponent,
-    FormsModule
+    CommonModule,                  // Directives Angular de base
+    FormationsRoutingModule,       // Routes des formations
+    NavBarComponent,               // ⭐ NAVBAR ADMIN (standalone)
+    FormsModule                    // Pour les formulaires
   ]
 })
 export class FormationsModule { }

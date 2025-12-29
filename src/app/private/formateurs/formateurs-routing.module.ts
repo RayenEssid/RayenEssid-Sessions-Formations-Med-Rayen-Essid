@@ -11,6 +11,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
+  // forChild car module enfant
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })

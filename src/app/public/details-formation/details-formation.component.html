@@ -7,7 +7,7 @@
             <p class="card-text mt-3">
                 <strong>Description : </strong> {{ formation.description }}
             </p>
-            <p class="card-text"> 
+            <p class="card-text">
                 <strong>Charge horaire : </strong> {{ formation.chargeHoraire }} heures
             </p>
         </div>
@@ -16,36 +16,37 @@
     <div class="mt-4">
         <h3 class="text-center text-secondary">Sessions disponibles</h3>
         <div class="row">
+            <!-- BOUCLE SUR TOUTES LES SESSIONS -->
             <div *ngFor="let session of sessions; let i = index" class="col-md-4 mb-3">
                 <div class="card session-card shadow-sm">
                     <div class="card-body">
+                        <!-- NUMÉRO DE SESSION -->
                         <h5 class="card-title">Session n° {{ i + 1 }}</h5>
+                        <!-- FORMATEURS -->
                         <p class="card-text">
-                            <i class="fas fa-chalkboard-teacher text-primary"></i> 
+                            <i class="fas fa-chalkboard-teacher text-primary"></i>
                             <strong>Formateurs : </strong> {{ session.formateurs.join(", ") }}
                         </p>
                         <p class="card-text">
-                            <i class="fas fa-calendar-alt text-warning"></i> 
+                            <i class="fas fa-calendar-alt text-warning"></i>
                             <strong>Date de début : </strong> {{ session.dateDeb | date:'dd/MM/yyyy' }}
                         </p>
                         <p class="card-text">
-                            <i class="fas fa-calendar-day text-info"></i> 
+                            <i class="fas fa-calendar-day text-info"></i>
                             <strong>Date de fin : </strong> {{ session.dateFin | date:'dd/MM/yyyy' }}
                         </p>
                         <p class="card-text">
-                            <i class="fas fa-users text-success"></i> 
+                            <i class="fas fa-users text-success"></i>
                             <strong>Nombre de candidats : </strong> {{ session.candidats.length }}
                         </p>
 
                         <div class="text-center">
-                            <button *ngIf="session.candidats.length < 5" 
-                                    class="btn btn-success" 
-                                    (click)="redirectToInscription(session.id)">
+                             <!-- BOUTON ACTIF (si moins de 15 candidats) -->
+                            <button *ngIf="session.candidats.length < 15" class="btn btn-success"
+                                (click)="redirectToInscription(session.id)">
                                 <i class="fas fa-user-plus"></i> S'inscrire
                             </button>
-                            <button *ngIf="session.candidats.length >= 5" 
-                                    class="btn btn-secondary" 
-                                    disabled>
+                            <button *ngIf="session.candidats.length >= 15" class="btn btn-secondary" disabled>
                                 <i class="fas fa-ban"></i> Session complète
                             </button>
                         </div>

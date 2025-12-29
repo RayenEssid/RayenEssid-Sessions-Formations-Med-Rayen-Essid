@@ -8,45 +8,43 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Candidat } from '../../Models/candidat';
 
 @Component({
-    selector: 'app-details-formation',
-    templateUrl: './details-formation.component.html',
-    styleUrl: './details-formation.component.css',
-    standalone: false
+  selector: 'app-details-formation',
+  templateUrl: './details-formation.component.html',
+  styleUrl: './details-formation.component.css',
+  standalone: false
 })
 export class DetailsFormationComponent implements OnInit {
   // Initialisation pour éviter les erreurs "undefined"
   formation = new Formation("", "", "", 0, "", "débutant", [], []);
   sessions: Session[] = [];
-  //nomFormateurs?: string;
-  //nomCandidat: string = '';
-  //prenomCandidat: string = '';
-  //emailCandidat: string = '';
+  
 
   constructor(
+    // ActivatedRoute : pour récupérer les paramètres d'URL
     private activeRoute: ActivatedRoute,
     private formationService: FormationServiceService,
     private sessionService: SessionServiceService,
     private formateurService: FormateurServiceService,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.activeRoute.params.subscribe((params) => {
+      //  Récupère la formation par son ID
       this.formationService.getFormationById(params['id']).subscribe((formation) => {
         this.formation = formation;
-  
+
         this.sessionService.getSessionsByFormationId(formation.id).subscribe((sessions) => {
           this.sessions = sessions
-          //this.sessions = sessions.map((session) => ({
-            //nomsFormateurs: this.getNomsFormateurs(session.formateurs),
-          //}));
+
         });
       });
     });
   }
+  // Redirige vers la page d'inscription avec l'ID de session
   redirectToInscription(idsession: string): void {
-    this.router.navigate(['/public-space/inscription',idsession]);
+    this.router.navigate(['/public-space/inscription', idsession]);
   }
-  
+
 
 }

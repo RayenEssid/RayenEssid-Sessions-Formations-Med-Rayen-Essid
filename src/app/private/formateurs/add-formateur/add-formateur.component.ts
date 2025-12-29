@@ -15,7 +15,7 @@ export class AddFormateurComponent {
 
   addFormateur(f: NgForm) {
     this.formateurService.addFormateur(f.value.nom, f.value.prenom, f.value.email, +f.value.telephone, +f.value.numCIN, f.value.photo, f.value.cv, f.value.specialites.split(',')).subscribe(
-      () => this.router.navigate(['/formateurs'])
+      () => this.router.navigate(['admin-space/formateurs'])
     );
   }
 }

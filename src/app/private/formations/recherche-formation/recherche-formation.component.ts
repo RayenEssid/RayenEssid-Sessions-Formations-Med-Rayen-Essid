@@ -19,6 +19,7 @@ export class RechercheFormationComponent {
       );
   }
   deleteFormation(id: string) {
+    // Confirmation avant suppression
     if (confirm("Êtes-vous sûr de vouloir supprimer cette formation ?")) {
       this.formationService.deleteFormation(id).subscribe(
         formationDeleted => this.formations = this.formations?.filter(formation => formation!.id !== formationDeleted.id)

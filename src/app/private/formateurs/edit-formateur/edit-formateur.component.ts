@@ -30,7 +30,7 @@ export class EditFormateurComponent implements OnInit {
 
   editFormateur(f: NgForm): void {
     this.formateurService.editFormateur(this.formateur!).subscribe(
-      () => this.router.navigate(['/admin-space/formateurs'])
+      () => this.router.navigate(['admin-space/formateurs'])
     );
   }
 }

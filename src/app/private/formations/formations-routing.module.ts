@@ -8,16 +8,18 @@ import { AddSessionComponent } from './add-session/add-session.component';
 import { EditSessionComponent } from './edit-session/edit-session.component';
 
 const routes: Routes = [
-      {path: "formations", component: RechercheFormationComponent},{
-      path: "formations/:id", component: DetailsFormationComponent
-    },{
-      path: "formations/edit/:id", component: EditFormationComponent
-    },{path:"addformation", component: AddFormationComponent},
-    { path: '', redirectTo: 'formations', pathMatch: 'full' },{
-      path: "addsession/:fid", component: AddSessionComponent
-    },{
-      path: "sessions/:id", component: EditSessionComponent
-    }
+  { path: "formations", component: RechercheFormationComponent }, {
+    path: "formations/:id", component: DetailsFormationComponent
+  }, {
+    path: "formations/edit/:id", component: EditFormationComponent
+  }, { path: "addformation", component: AddFormationComponent },
+  { path: '', redirectTo: 'formations', pathMatch: 'full' },
+  // ROUTE  : Ajouter une session à une formation
+  {
+    path: "addsession/:fid", component: AddSessionComponent
+  }, {
+    path: "sessions/:id", component: EditSessionComponent
+  }
 ];
 
 @NgModule({

@@ -1,12 +1,22 @@
 <div class="input-group mb-3">
-  <input type="text" class="form-control form-control-lg rounded-pill border-info shadow-sm"
-    placeholder="Rechercher une formation..." 
-    (input)="ModifierSearchValue($event)" 
-    aria-label="Rechercher une formation"
-    aria-describedby="search-addon" />
+  <input #searchInput   type="text" class="form-control form-control-lg rounded-pill border-info shadow-sm"
+    placeholder="Rechercher une formation..." (input)="ModifierSearchValue($event)"
+    aria-label="Rechercher une formation" aria-describedby="search-addon" />
+  <!-- (input) : Déclenché à CHAQUE frappe de touche
+    - ModifierSearchValue($event) : Appelle la méthode avec l'événement-->
   <div class="input-group-append">
     <button class="btn btn-info rounded-pill" type="button" id="search-addon">
       <i class="fas fa-search"></i>
+    </button>
+  </div>
+  <div class="input-group-append" *ngIf="searchValue">
+    <button 
+      class="btn btn-outline-secondary rounded-pill ml-2" 
+      type="button"
+      (click)="clearSearch()"
+      aria-label="Effacer la recherche"
+    >
+      <i class="fas fa-times"></i>
     </button>
   </div>
 </div>

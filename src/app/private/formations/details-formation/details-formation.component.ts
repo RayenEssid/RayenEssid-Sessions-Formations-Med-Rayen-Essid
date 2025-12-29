@@ -16,10 +16,7 @@ export class DetailsFormationComponent implements OnInit {
   // Initialisation pour éviter les erreurs "undefined"
   formation = new Formation("", "", "", 0, "", "débutant", [], []);
   sessions: Session[] = [];
-  //nomFormateurs?: string;
-  //nomCandidat: string = '';
-  //prenomCandidat: string = '';
-  //emailCandidat: string = '';
+
 
   constructor(
     private activeRoute: ActivatedRoute,
@@ -54,8 +51,15 @@ export class DetailsFormationComponent implements OnInit {
 
   deleteSession(id: string) {
     if (confirm("Êtes-vous sûr de vouloir supprimer cette session ?")) {
+      
+      // Appel au service de suppression
       this.sessionService.deleteSession(id).subscribe(
-        sessionDeleted => this.sessions = this.sessions?.filter(session => session!.id !== sessionDeleted.id)
+        sessionDeleted => {
+          // Filtre la session supprimée de la liste locale
+          this.sessions = this.sessions?.filter(
+            session => session!.id !== sessionDeleted.id
+          );
+        }
       );
     }
   }

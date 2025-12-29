@@ -1,3 +1,4 @@
+// OnInit : Interface pour le cycle de vie (ngOnInit)
 import { Component, OnInit } from '@angular/core';
 import { Formation } from '../../Models/formation';
 import { FormationServiceService } from '../../Services/formation-service.service';
@@ -11,7 +12,7 @@ import { FormationServiceService } from '../../Services/formation-service.servic
 export class AccueilComponent implements OnInit{
   formations: Formation[] = [];
   categories: string[] = [];
-
+   // Injection de dépendance : Angular donne le service
   constructor(private formationService: FormationServiceService) { }
   ngOnInit(): void {
     this.formationService.getFormations().subscribe({
