@@ -3,36 +3,46 @@
 <div class="container mb-3">
   <div class="text-center mb-5">
     <h1 class="display-4 text-primary">Plateforme de gestion des formations à ISET Radès</h1>
-    <p class="lead text-muted">Bienvenue sur notre plateforme de formations ! Découvrez une large sélection de
-      formations
-      classées par catégories et rejoignez celles qui vous passionnent.</p>
+    <p class="lead text-muted">
+      Bienvenue sur notre plateforme de formations ! Découvrez une large sélection de
+      formations classées par catégories et rejoignez celles qui vous passionnent.
+    </p>
   </div>
+
   <!--  LISTE DES CATÉGORIES (BOUCLE PRINCIPALE) -->
   <div class="row">
     @for (category of categories; track $index) {
-    <div class="col-md-4 mb-4">
-      <div class="card">
-        <!-- Image de la catégorie -->
-        <img src="https://picsum.photos/500/300?random={{ $index }}" class="card-img-top" alt="Tech image {{ $index }}">
-        <div class="card-header text-center">
-          <h4>{{ category }}</h4>
-        </div>
-        <div class="card-body">
-          <ul>
-            <!--  BOUCLE DES FORMATIONS PAR CATÉGORIE -->
-            @for (formation of formations; track $index) {
-            <!-- Filtre Si la formation appartient à cette catégorie, l'affiche-->
-            @if (formation.categories.includes(category)) {
-            <li>
-              <strong>{{ formation.titre }}</strong><br />
-              {{ formation.description }}
-            </li>
-            }
-            }
-          </ul>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+
+          <!-- Image de la catégorie -->
+          <img 
+            [src]="'https://source.unsplash.com/500x300/?' + category + '&sig=' + $index"
+            class="card-img-top"
+            alt="Image catégorie {{ category }}">
+
+          <div class="card-header text-center">
+            <h4>{{ category }}</h4>
+          </div>
+
+          <div class="card-body">
+            <ul>
+              <!--  BOUCLE DES FORMATIONS PAR CATÉGORIE -->
+              @for (formation of formations; track $index) {
+
+                <!-- Filtre Si la formation appartient à cette catégorie, l'affiche-->
+                @if (formation.categories.includes(category)) {
+                  <li>
+                    <strong>{{ formation.titre }}</strong><br />
+                    {{ formation.description }}
+                  </li>
+                }
+
+              }
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
     }
   </div>
 </div>
