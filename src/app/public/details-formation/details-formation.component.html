@@ -42,11 +42,11 @@
 
                         <div class="text-center">
                              <!-- BOUTON ACTIF (si moins de 15 candidats) -->
-                            <button *ngIf="session.candidats.length < 15" class="btn btn-success"
+                            <button *ngIf="session.candidats.length < 7" class="btn btn-success"
                                 (click)="redirectToInscription(session.id)">
                                 <i class="fas fa-user-plus"></i> S'inscrire
                             </button>
-                            <button *ngIf="session.candidats.length >= 15" class="btn btn-secondary" disabled>
+                            <button *ngIf="session.candidats.length >= 7" class="btn btn-secondary" disabled>
                                 <i class="fas fa-ban"></i> Session complète
                             </button>
                         </div>

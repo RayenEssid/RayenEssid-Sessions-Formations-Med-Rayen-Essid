@@ -39,5 +39,10 @@ categoryImages: { [key: string]: string } = {
   'Systèmes Embarqués': 'https://94fa3c88.delivery.rocketcdn.me/wp-content/uploads/2024/06/systemes-embarques-datascientest-1024x585.jpg',
   'Électronique': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHgHqE6jpF0pWud2hF_zUgcxIqKvDI3OCvfQ&s'
 };
+getCategoryImage(category: string, index: number): string {
+  return this.categoryImages[category]
+    ?? `https://picsum.photos/500/300?random=${index}`;
+}
+
 
 }
